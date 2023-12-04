@@ -1,4 +1,4 @@
-/* Dracula theme */
+/* custom by vuxdox v1 */
 :root {
     --gradient-dir1: to top;
     --gradient-dir2: to right;
@@ -12,10 +12,6 @@
     --gradient-secondary: linear-gradient(245deg, #fcb564, #ff65f2);
 }
 
-* {
-    /* font-weight: 500;
-    font-family: "Dank Mono"; */
-}
 
 .mtk10,
 .mtk15 {
@@ -34,10 +30,11 @@
     color: transparent;
     font-weight: 700;
 }
-.mtk, 
-.mtk14 {
-    color: #efdf62;
+
+.mtk11 {
+    color: #e9f284;
 }
+
 .mtk26 {
     background-image: linear-gradient(var(--gradient-dir5),
             #4dd78a,
@@ -70,14 +67,6 @@
 }
 
 
-.mtk7 {
-    color: transparent;
-    background-image: linear-gradient(var(--gradient-dir2), #fc6c8f, #ffb86c);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 
 :root {
     --general-gradient-primary: #9bafd9 0%, #82aaff 100%;
@@ -89,14 +78,6 @@
     --size: 5px;
 }
 
-/* body>div .part.editor>.content .editor-group-container>.title .tabs-container>.tab {
-    border-right: 0 !important;
-  } */
-
-/* body > div[class*="Dracula-normal-contrast-json"] :where(.mtk1), */
-body>div :where([data-mode-id="markdown"], [data-mode-id="plaintext"]) .view-line {
-    font-family: "Dank Mono";
-}
 
 .monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-item.checked .active-item-indicator:before {
     border: 0;
@@ -126,16 +107,6 @@ body>div :where([data-mode-id="markdown"], [data-mode-id="plaintext"]) .view-lin
     --general-gradient-secondary: #fcb564, #ff65f2, #ff69cf;
 }
 
-/* .tabs-container>.tab.active.tab-border-top>.tab-border-top-container {
-    height: 1px !important;
-    background-image: linear-gradient(to right,
-        var(--general-gradient-secondary));
-    width: 50% !important;
-    left: 50% !important;
-    transform: translate3d(-50%, 0%, 0) !important;
-    top: 0 !important;
-  } */
-
 .tabs-container {
     gap: 4px;
     padding: 4px 8px;
@@ -154,31 +125,10 @@ body>div :where([data-mode-id="markdown"], [data-mode-id="plaintext"]) .view-lin
     opacity: 1;
 }
 
-/* 
-  .tabs-container>.tab:before {
-    content: "";
-    border-radius: inherit;
-    background: linear-gradient(90.01deg,
-        rgba(229, 156, 255, 0.24) 0.01%,
-        rgba(186, 156, 255, 0.24) 50.01%,
-        rgba(156, 178, 255, 0.24) 100%);
-    inset: 0;
-    position: absolute;
-    pointer-events: none;
-    --mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  } */
-
 .editor-container .monaco-scrollable-element>.scrollbar.vertical>.slider {
     background: linear-gradient(to top, var(--general-gradient-secondary));
-    width: 1px !important;
 }
 
-
-/* SYNTH WAVE ORIGINAL STYLES */
 
 /* Active dots */
 .monaco-workbench .activitybar>.content .monaco-action-bar .badge .badge-content {
@@ -194,7 +144,8 @@ body>div :where([data-mode-id="markdown"], [data-mode-id="plaintext"]) .view-lin
     overflow: hidden;
 }
 
-.editor-group-container:after {
+/* background line */
+/* .editor-group-container:after {
     content: '';
     height: 300px;
     width: 100%;
@@ -209,14 +160,13 @@ body>div :where([data-mode-id="markdown"], [data-mode-id="plaintext"]) .view-lin
     bottom: 0;
     transform: perspective(100px) rotateX(60deg);
     z-index: 0;
-}
+} */
 
 .editor-group-container {
     position: relative;
     overflow: hidden;
 }
 
-/* .monaco-editor > .overflow-guard > .monaco-scrollable-element:before { */
 .monaco-editor:before,
 .editor-group-container:before {
     background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, #FFF 2px, #FFF 4px);
@@ -248,9 +198,9 @@ canvas {
 /* Sweet sunset dots */
 /* .monaco-workbench .activitybar>.content .monaco-action-bar .badge .badge-content {
     background: linear-gradient(to bottom, #fff951 25%, #fc28a8);
-  }
-  
-  .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit::after {
+    }
+    
+    .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -467,6 +417,10 @@ canvas {
 }
 
 .monaco-list-row.focused.selected {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow: inset 0 -7px 11px #8a2dc033;
+}
+.monaco-list-row.focused.selected .label-name {
+    color: #20e3b2;
+    text-shadow: 0 0 2px #4dd78a;
 }
